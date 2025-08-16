@@ -3,6 +3,7 @@
     "description": "Pages for discussions",
     "type": "flarum-extension",
     "require": {
+        "php": ">=8.2",
         "flarum/core": "^2.0.0"
     },
     "autoload": {
