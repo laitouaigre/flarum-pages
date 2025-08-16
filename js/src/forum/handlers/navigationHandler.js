@@ -12,7 +12,6 @@ export function goToPage(pageNumber, totalPages, currentDiscussionId) {
     }
 
     const nearPostNumber = (targetPage - 1) * POSTS_PER_PAGE + 1;
-    console.log(`Navigating to page ${targetPage}, near post ${nearPostNumber}`);
 
     if (!currentDiscussionId) {
         console.error("Cannot navigate: Current discussion ID unknown.");
@@ -26,7 +25,6 @@ export function goToPage(pageNumber, totalPages, currentDiscussionId) {
     }
 
     const url = app.route.discussion(discussion, nearPostNumber);
-    console.log("Navigating to URL:", url);
 
     if (app.history && typeof app.history.pushState === 'function') {
         app.history.pushState(null, url);

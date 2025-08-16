@@ -24,7 +24,6 @@ export function updateDisplay(currentPage, totalPages) {
     pageNumberInput.min = 1;
     pageNumberInput.max = totalPages;
     totalPagesSpan.textContent = ` of ${totalPages}`;
-    console.log(`Page counter display updated: Page ${currentPage} of ${totalPages}`);
 }
 
 // --- Removers ---
@@ -36,7 +35,6 @@ export function removeDisplay() {
     pageNumberInput = null;
     totalPagesSpan = null;
     isElementAdded = false;
-    console.log("Page counter display elements removed.");
 }
 
 // --- Cleanup Listeners ---
@@ -233,7 +231,6 @@ export function createPlaceholderElement() {
     isElementAdded = true; // Even if placeholder
     pageNumberInput = null;
     totalPagesSpan = null;
-    console.log("Placeholder element created.");
 }
 
 // --- Enhanced Cleanup ---

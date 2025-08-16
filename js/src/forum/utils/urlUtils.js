@@ -18,13 +18,11 @@ export function getCurrentPostNumberFromPath() {
         const postNumberStr = parts[2];
         const postNumber = parseInt(postNumberStr, 10);
         if (!isNaN(postNumber) && postNumber >= 1) {
-          console.log("Current post number parsed from path:", postNumber);
           return postNumber;
         }
       } else {
         // On the main discussion page (e.g., /d/1-test), no specific post number.
         // Default to the first post.
-        console.log("On main discussion page, defaulting post number to 1.");
         return 1;
       }
     }
